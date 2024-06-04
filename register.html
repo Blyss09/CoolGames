@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/register.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="blur-overlay"></div>
+        <div class="content">
+        <div class="login-box">
+            <p>S'enregistrer</p>
+            <form id="register-form">
+                <div class="user-box">
+                    <input id="signup-username" required="required" name="username" type="text">
+                    <label>Pseudo</label>
+                  </div>
+              <div class="user-box">
+                <input id="signup-email" required="required" name="email" type="text" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
+                <label>Email</label>
+              </div>
+              <div class="user-box">
+                <input id="signup-password" required="required" name="password" type="password" pattern=".{8,}">
+                <label>Mot de passe</label>
+              </div>
+              <div class="buttons-menu">
+                <button type="submit" class="styled-button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    S'inscrire
+                </button>
+                <a href="./index.html">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Quitter
+                </a>
+            </div>
+            </form>
+            <p>Déjà inscrit ? <a href="./logIn.html" class="a2">Connecte toi !</a></p>
+          </div>
+        </div>
+    </main>
+
+</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script src="./scripts/register.js"></script>
+</html>
