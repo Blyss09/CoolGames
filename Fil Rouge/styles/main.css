@@ -1,0 +1,322 @@
+@font-face {
+    font-family: "MinecraftFont";
+    src: url("../fonts/Minecraft.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+                    /* Reset CSS  */
+
+* {
+    font-family: "MinecraftFont";
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+    list-style: none;
+    text-decoration: none;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+                        /* Fin Reset CSS */
+
+
+body {
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    margin: 0; 
+    height: 100vh;
+    overflow: hidden;
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.burger-menu .bar {
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+/* Styles pour le burger menu */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.burger-menu .bar {
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+
+.active {
+    color: rgb(255, 8, 255);
+}
+
+#navigation-content {
+    display: flex;
+    flex-direction: row;
+    font-size: 28px;
+}
+
+#navigation-content li {
+    padding-right: 70px;
+}
+
+#navigation-content li:last-child{
+    padding-right: 0;
+}
+
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    font-size: 28px;
+}
+
+#navigationBurger-content {
+    display: none;
+}
+
+
+
+.navigation li  {
+    padding: 30px;
+}
+
+.logo img {
+    width: 8vw;
+    border-radius: 100px;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+.container .card{
+    position: relative;
+    cursor: pointer;
+}
+
+.container .card .face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.container .card .face.face1{
+    position: relative;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.container .card:hover .face.face1{
+    background: linear-gradient(90deg, #ad5389 0%, #3c1053 100%);
+    transform: translateY(0);
+}
+
+.container .card .face.face1 .content{
+    opacity: 0.2;
+    transition: 0.5s;
+}
+
+.container .card:hover .face.face1 .content{
+    opacity: 1;
+}
+
+.container .card .face.face1 .content img{
+    max-width: 100px;
+}
+
+.container .card .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.container .card .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+}
+
+.container .card:hover .face.face2{
+    transform: translateY(0);
+}
+
+.container .card .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+}
+
+.container .card .face.face2 .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    padding: 5px;
+    border: 1px solid linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+}
+
+.container .card .face.face2 .content a:hover{
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+}
+
+                    /* Media Queries */
+
+
+
+/* Styles pour la navigation mobile */
+@media (max-width: 767px) {
+
+    body {
+        overflow-y: scroll;
+        background-attachment: fixed;
+    }
+
+    header {
+        position: fixed;
+        width: 100%;
+        z-index: 3000;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .overflowHidden {
+        overflow: hidden;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: -100%;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        z-index: 1000;
+        max-height: 0%;
+        overflow: hidden;
+        transition: 0.5s ease;
+    }
+    
+    .navigationHeader {
+        display: none;
+    }
+ 
+
+    #navigationBurger-content {
+        display: block;
+    }
+
+    #navigationBurger-content li {
+        margin-bottom: 30px;
+    }
+
+    #navigationBurger-content li:last-child {
+        margin-bottom: 0;
+    }
+
+    .navigation.active {
+        height: 100vh;
+        position: absolute;
+        max-height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2999;
+    }
+
+    .navigation li {
+        padding: 15px 0;
+    }
+
+    .logo img {
+        width: 80px;
+        max-width: 25vw;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container:first-child {
+        padding-top: 100px;
+    }
+
+}
