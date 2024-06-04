@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/ladder.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <div class="logo">
+          <img src="./img/logo.jpg" alt="logo site" />
+        </div>
+        <div class="navigationHeader">
+          <div id="navigation-content">
+            <li><a href="./index.html">Acceuil</a></li>
+            <li><a href="./main.html">Jeux</a></li>
+            <li><a href="./ladder.html" class="active">Classement</a></li>
+            <li id="profile"><a href="./profile.html">Profile</a></li>
+          </div>
+        </div>
+        <button class="burger-menu" aria-label="Ouvrir le menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </header>
+    <div class="navigation">
+      <div id="navigationBurger-content">
+        <li><a href="./index.html">Acceuil</a></li>
+        <li><a href="./main.html">Jeux</a></li>
+        <li><a href="./ladder.html" class="active">Classement</a></li>
+        <li id="profile"><a href="./profile.html">Profile</a></li>
+      </div>
+    </div>
+    <main>
+      <div class="ranking">
+        <div class="ranking-container">
+          <h1>Classement des Joueurs</h1>
+          <table id="players-table">
+            <thead>
+              <tr>
+                <th>Rang</th>
+                <th>Nom</th>
+                <th>Score</th>
+              </tr>
+            </thead>
+            <tbody id="players-list"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="./scripts/ladder.js"></script>
+</html>
